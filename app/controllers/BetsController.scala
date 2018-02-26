@@ -2,7 +2,7 @@ package controllers
 
 import javax.inject._
 
-import models.{Bet, City}
+import models.{Bet}
 import play.api.Logger
 import play.api.libs.json._
 import play.api.mvc._
