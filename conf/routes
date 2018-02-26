@@ -1,4 +1,4 @@
-POST     /bets/place                controllers.BetsController.place(id: String, amount: Double)
+POST     /bets/place                controllers.BetsController.place
 GET      /bets                      controllers.BetsController.show(id: String)
-
+GET      /healthcheck               controllers.HealthCheckController.healthCheck
 

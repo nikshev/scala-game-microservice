@@ -12,3 +12,5 @@ target
 /libexec
 .gitignore
 *.ignore
+/project/target
+/project/project/target
