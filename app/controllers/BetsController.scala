@@ -39,7 +39,7 @@ class BetsController @Inject()(val reactiveMongoApi: ReactiveMongoApi)(implicit 
 
   def findBetsById(id: String) : Future[List[Bet]] = {
     // let's do our query
-    val futureCitiesList: Future[List[Bet]] =  betsFuture.flatMap {
+    val futureBetsList: Future[List[Bet]] =  betsFuture.flatMap {
       // find all cities with name `name`
       _.find(Json.obj("playerId" -> id)).
       // perform the query and get a cursor of JsObject
@@ -48,8 +48,10 @@ class BetsController @Inject()(val reactiveMongoApi: ReactiveMongoApi)(implicit 
       collect[List]()
     }
 
-    futureCitiesList
+    futureBetsList
   }
+
+
 
 }
 
