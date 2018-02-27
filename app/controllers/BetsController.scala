@@ -16,8 +16,9 @@ import scala.concurrent.{ExecutionContext, Future}
 
 
 /**
-  * Simple controller that directly stores and retrieves [models.City] instances into a MongoDB Collection
-  * Input is first converted into a city and then the city is converted to JsObject to be stored in MongoDB
+  * Simple controller that directly stores and retrieves [models.Bets] instances into a MongoDB Collection
+  * Input is first converted into a bets and then the bets is converted to JsObject to be stored in MongoDB
+  * Also I use Wallet case class for work with deposit
   */
 @Singleton
 class BetsController @Inject()(val reactiveMongoApi: ReactiveMongoApi)(implicit exec: ExecutionContext) extends Controller with MongoController with ReactiveMongoComponents {
