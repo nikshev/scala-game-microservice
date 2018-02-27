@@ -1,0 +1,123 @@
+{
+	"id": "e98d4c95-b050-56c6-ddb4-0558bd50d968",
+	"name": "Game collection",
+	"description": "Collection for game microservice",
+	"order": [
+		"1da2b78d-21f1-da2c-fc9c-b6e307292e8d",
+		"9f25dd35-13c4-5e5f-492d-ff45e43085fd",
+		"e7c760f9-15b1-0170-36a0-5da520242cb6"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1519390886451,
+	"owner": 0,
+	"public": false,
+	"events": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "4d8eebce-9c8f-4f27-a47d-8b231a05c676",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "660243c3-58b8-4385-a575-26a2567db189",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variables": [],
+	"auth": null,
+	"requests": [
+		{
+			"id": "1da2b78d-21f1-da2c-fc9c-b6e307292e8d",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:9000/bets?id=6ef84294-abda-4be7-964c-e4530e91a235",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "6ef84294-abda-4be7-964c-e4530e91a235",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"auth": null,
+			"time": 1519647201620,
+			"name": "Show bets",
+			"description": "Show bets request",
+			"collectionId": "e98d4c95-b050-56c6-ddb4-0558bd50d968",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "9f25dd35-13c4-5e5f-492d-ff45e43085fd",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:9000//bets/place",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"auth": null,
+			"time": 1519650399584,
+			"name": "Place bet",
+			"description": "Place bet",
+			"collectionId": "e98d4c95-b050-56c6-ddb4-0558bd50d968",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\"playerId\":\"6ef84294-abda-4be7-964c-e4530e91a235\",\"gameId\":\"1\", \"amount\": 1.5}"
+		},
+		{
+			"id": "e7c760f9-15b1-0170-36a0-5da520242cb6",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:9000/healthcheck",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"auth": null,
+			"time": 1519451410113,
+			"name": "Health Check",
+			"description": "Health check request",
+			"collectionId": "e98d4c95-b050-56c6-ddb4-0558bd50d968",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		}
+	]
+}
