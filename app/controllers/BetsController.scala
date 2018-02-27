@@ -57,13 +57,12 @@ class BetsController @Inject()(val reactiveMongoApi: ReactiveMongoApi)(implicit 
     * @param id - player/wallet id
     * @return
     */
-  def show(id: String) =  Action.async {
-    val bets = findBetsById(id)
+  def show(id: String) = Action.async {
+    val betsList = findBetsById(id)
     // everything's ok! Let's reply with a JsValue
-    bets.map { bet =>
-      Ok(Json.toJson(bet))
+    betsList.map { bets =>
+      Ok(Json.toJson(bets))
     }
-    Future.successful(BadRequest("Can't find bets for:"+Json.obj("playerId" -> id).toString()))
   }
 
   /**
@@ -84,6 +83,8 @@ class BetsController @Inject()(val reactiveMongoApi: ReactiveMongoApi)(implicit 
 
     futureBetsList
   }
+
+
 
   /**
     * Find wallet by id

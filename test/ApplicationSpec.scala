@@ -35,7 +35,6 @@ class ApplicationSpec extends PlaySpec with OneAppPerTest {
 
     "Show Bets" in {
       val bets = route(app, FakeRequest(GET, "/bets?id=6ef84294-abda-4be7-964c-e4530e91a235")).get
-      println(contentAsString(bets))
       status(bets) mustBe OK
       contentType(bets) mustBe Some("application/json")
     }
